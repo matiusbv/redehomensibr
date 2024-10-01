@@ -62,12 +62,12 @@ function App() {
     </div>
 
   <div className="container">
-    <label>Id do Post</label>
+    {/* <label>Id do Post</label>
     <input 
       placeholder='Digite o ID do post'
       value={idPost}
       onChange={(e) => setIdPost(e.target.value)}
-    /><br/><br/>
+    /><br/><br/> */}
 
     <label>nome:</label>
     <textarea 
