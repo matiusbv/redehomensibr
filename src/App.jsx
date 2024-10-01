@@ -2,6 +2,10 @@ import { useState } from 'react'
 import { db } from './firebaseConnection'
 import { doc, setDoc, collection, addDoc, getDoc, getDocs, updateDoc } from 'firebase/firestore'
 import './App.css';
+import leftImage from './assets/ibr.png'
+import rightImage from './assets/rede.png'
+
+
 
 
 function App() {
@@ -51,7 +55,11 @@ function App() {
 
   return (
     <div>
-    <h1>ReactJS + Firebase :)</h1>
+        <div className="header">
+      <img src={leftImage} alt="Imagem Esquerda" className="image-side" />
+      <h1>Rede de Homens</h1>
+      <img src={rightImage} alt="Imagem Direita" className="image-side" />
+    </div>
 
   <div className="container">
     <label>Id do Post</label>
@@ -79,13 +87,13 @@ function App() {
 
     <button onClick={handleAdd}>Cadastrar</button>
     <button onClick={buscarPost}>Buscar Posts</button>
-    <button onClick={editarPost}>Atualizar post</button>
+    {/* <button onClick={editarPost}>Atualizar post</button> */}
 
     <ul>
       {posts.map( (post) => {
         return(
           <li key={post.id}>
-            <strong>ID: {post.id}</strong>
+         
             <span>Nome: {post.nome}</span>
             <span>Telefone: {post.telefone}</span>
           </li>
