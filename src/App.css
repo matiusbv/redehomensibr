@@ -34,7 +34,8 @@ label {
   color: #555;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -81,6 +82,35 @@ li span {
   color: #666;
 }
 
+/* Estilos para os itens da lista */
+.post-item {
+  display: flex; /* Usar flexbox para alinhar os itens */
+  justify-content: space-between; /* Espaçar os itens para as extremidades */
+  align-items: center; /* Centralizar verticalmente */
+  border-bottom: 1px solid #ddd; /* Adiciona uma borda inferior para separar os itens */
+  padding: 15px 0; /* Ajuste o padding para espaçamento */
+}
+
+.containerNomes {
+
+  width: calc(100% - 100px); /* Ajuste a largura para dar espaço para o botão */
+  padding: 10px; /* Adicione padding para dar um espaço interno */
+}
+
+.delete-button {
+  background-color: red; /* Cor de fundo vermelha */
+  color: white; /* Cor do texto branca */
+  width: auto; /* Largura automática para o botão */
+  padding: 5px 10px; /* Ajuste o padding conforme necessário */
+  border: none; /* Remove borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+.delete-button:hover {
+  background-color: darkred; /* Cor de fundo quando o mouse passa por cima */
+}
+
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
   .container {
@@ -93,6 +123,10 @@ li span {
 
   button {
     font-size: 0.9rem;
+  }
+
+  .image-side {
+    width: 40px; /* Ajuste o tamanho conforme necessário */
   }
 }
 
@@ -110,7 +144,8 @@ li span {
     font-size: 1.1rem;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-size: 1.1rem;
   }
 }
@@ -131,16 +166,6 @@ h1 {
 
 /* Estilos para as imagens */
 .image-side {
-  width: 50px;  /* Ajuste o tamanho conforme necessário */
+  width: 50px; /* Ajuste o tamanho conforme necessário */
   height: auto;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  
-  .image-side {
-    width: 40px;
-  }
 }
